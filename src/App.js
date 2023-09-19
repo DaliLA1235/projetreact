@@ -1,23 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Navbar, Container, Row, Col, Card } from 'react-bootstrap';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar bg="dark" variant="dark">
+        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+      </Navbar>
+      <Container>
+        <Row>
+          <Col>
+            <h1>React Bootstrap Example</h1>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Card>
+              <Card.Body>
+                <Card.Title>Card 1</Card.Title>
+                <Card.Text>This is Card 1 content.</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col>
+            <Card>
+              <Card.Body>
+                <Card.Title>Card 2</Card.Title>
+                <Card.Text>This is Card 2 content.</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col>
+            <Card>
+              <Card.Body>
+                <Card.Title>Card 3</Card.Title>
+                <Card.Text>This is Card 3 content.</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
